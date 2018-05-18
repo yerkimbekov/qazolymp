@@ -1,0 +1,155 @@
+body{
+/*	height: 100%;*/
+	background-color: #f7f7f7;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+.container{
+	width: 1150px;
+	margin: 0 auto;
+}
+
+/* HEADER */
+
+header{
+	text-align: center;
+	height: 50px;
+	margin: 0px;
+}
+
+header .container{
+	padding: 0px 10px 0px 10px;
+	border-radius: 10px; 
+	background-color: #3b5998;
+	height: 100%;
+}
+
+/* LOGO */
+.logo{
+	height: 60px;
+}
+/* LOGO END*/
+/* Navigation MENU */
+.navigation{
+	height: 100%;
+	float: left;	
+}
+
+.navigation ul{
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	list-style-type: none;
+	height: 100%;
+}
+.navigation ul:after {
+	display: block;
+	clear: both;
+	float: none;
+}
+
+.navigation li{
+	width: 125px;
+	float: left;
+	position: relative;
+	display: inline-block;
+}
+.navigation li a{
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 15.0px;
+	font-size: 17px;
+}
+.now{
+	text-decoration: underline;
+}
+.navigation a:hover{
+	color: #8b9dc3;
+}
+/*Submenu*/
+ul.submenu{
+	display: none;
+	position: absolute;
+	width: 125px;
+	top: 50px;
+	left: 0;
+}
+ul.submenu > li {
+	width: 125px;
+	height: 50px;
+	float: left;
+	position: relative;
+}
+ul.submenu > li > a {
+	height: 100%;
+	box-sizing: padding-box;
+	font-size: 16px;
+	display: block;
+	color: #f7f7f7;
+	background-color: #3b5998;
+	text-decoration: none;
+}
+
+.navigation li:hover ul.submenu {
+	display: block;
+}
+/* Submenu END */
+/* Navigation MENU END*/
+
+/* loginAndRegistrButton MENU */
+
+.loginAndRegistrButton{
+	margin-right: 10px;
+	float: right;	
+}
+
+.loginAndRegistrButton ul{
+	border-radius: 15px;
+	border: 1px solid #6e7c9b;
+	background-color: #8b9dc3;
+	margin: 0px;
+	margin-top: 9px;
+	padding: 0px;
+	display: block;
+	list-style-type: none;
+	height: 100%;
+}
+
+.loginAndRegistrButton li{
+	display: inline-block;
+}
+.loginAndRegistrButton a{
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	margin: 0px;
+	padding: 7px 10px 7px 10px;
+	font-size: 15px;
+}
+.loginAndRegistrButton a:hover{
+	color: #3b5998;
+}
+/* loginAndRegistrButton MENU END*/
+/* Footer */
+footer hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 90px;
+	width: 100%;
+	color: #000000;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+/* Footer END*/
