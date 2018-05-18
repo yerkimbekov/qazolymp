@@ -1,3 +1,9 @@
+<?php 
+	session_start();
+	if($_SESSION['username']) {
+		header('location: index.php');
+	}
+?>
 <!DOCTYPE html>
 <html lang="URL-8">
 <head>
@@ -53,9 +59,11 @@
 					if($_SESSION['username'])
 					{
 					echo '<li><a href="#">Профиль</a></li>';
+					echo '|';
 					echo '<li><a href="logout.php">Выйти</a></li>';
 					} else {
 					echo '<li><a href="login.php">Вход</a></li>';
+					echo '|';
 					echo '<li><a href="register.php">Регистрация</a></li>';
 					}
 					?>
@@ -120,22 +128,26 @@
 												if ($tr == 1) {
 													echo "Формат username'a это a-z, A-Z, 0-9.";
 												} else {
-														$confirmcode = rand();
-														$query = mysqli_query($link, "INSERT INTO `logins` VALUES('','$username','$enc_password','$email','0','$confirmcode')");
+													if (strlen($password) < 8) {
+														echo "Минимальная длина пароля 8 символов.";
+													} else {
+															$confirmcode = rand();
+															$query = mysqli_query($link, "INSERT INTO `logins` VALUES('','$username','$enc_password','$email','0','$confirmcode')");
 
-														$message =
-														"
-														Подтверждение почты.
-														Перейдите по ниже расположенной ссылке, чтобы подтвердить почту.
+															$message =
+															"
+															Подтверждение почты.
+															Перейдите по ниже расположенной ссылке, чтобы подтвердить почту.
 
-														http://qazolympalpha.go-host.kz/emailconfirm.php?username=$username&code=$confirmcode
+															http://qazolympalpha.go-host.kz/emailconfirm.php?username=$username&code=$confirmcode
 
-														Qazolymp team.
-														";
+															Qazolymp team.
+															";
 
-														mail($email,"Подтверждение",$message,"From: admin@qazolymp.kz");
+															mail($email,"Подтверждение",$message,"From: admin@qazolymp.kz");
 
-														echo "Регистрация пройдена! Пожалуйста подтвердите вашу почту, перейдя по ссылке которую мы вам прислали.";
+															echo "Регистрация пройдена! Пожалуйста подтвердите вашу почту, перейдя по ссылке которую мы вам прислали.";
+														}
 													}
 												}
 										}
