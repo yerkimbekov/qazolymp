@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="URL-8">
 <head>
+	<link rel="shortcut icon" href="/image/logoo.png" type="image/png">
 	<meta charset="UTF-8" />
 	<title>QazOlymp</title>
 	<link rel="stylesheet" href="css/main.css">
@@ -132,7 +133,7 @@
 														echo "Минимальная длина пароля 8 символов.";
 													} else {
 															$confirmcode = rand();
-															$query = mysqli_query($link, "INSERT INTO `logins` VALUES('','$username','$enc_password','$email','0','$confirmcode')");
+															$query = mysqli_query($link, "INSERT INTO `logins` VALUES('','$username','$enc_password','$email','0','$confirmcode', NOW())");
 
 															$message =
 															"

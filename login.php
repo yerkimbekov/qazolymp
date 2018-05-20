@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="URL-8">
 <head>
+	<link rel="shortcut icon" href="/image/logoo.png" type="image/png">
 	<meta charset="UTF-8" />
 	<title>QazOlymp</title>
 	<link rel="stylesheet" href="css/main.css">
